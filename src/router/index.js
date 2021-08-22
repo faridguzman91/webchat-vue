@@ -1,15 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import login from '@/components/Login'
+import Login from '@/components/Login'
+import ChatRoom from '@/components/ChatRoom'
 
-import { FirebaseAuth } from '@/library/database'
+import { FirebaseAuth } from '@/library/Database'
 
 Vue.use(Router)
 
 let router = new Router({
   mode: 'history',
-  routes: [{ path: '/', component: login }]
+  routes: [
+    { path: '/', component: Login },
+    { path: '/chat', component: ChatRoom },
+    { path: '/chat/:slug', component: ChatRoom }
+  ]
 })
 
 router.beforeEach((to, _from, next) => {
@@ -18,6 +23,10 @@ router.beforeEach((to, _from, next) => {
   if (auth.currentUser === null && to.path !== '/') {
     next({
       path: '/'
+    })
+  } else if (auth.currentUser !== null && to.path === '/') {
+    next({
+      path: '/chat'
     })
   } else {
     next()
