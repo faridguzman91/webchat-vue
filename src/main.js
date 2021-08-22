@@ -3,6 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './components/store'
+
+import 'firebase/auth'
+import { FirebaseAuth } from '@/library/database'
+
+import veevalidate from 'vee-validate'
 
 import 'bulma/css/bulma.css'
 
@@ -19,10 +25,26 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+// baseApp
+
+let baseApp
+
+FirebaseAuth.onAuthStateChanged(() => {
+  /* eslint-disable no-new */
+  if (!baseApp) {
+    new Vue({
+      el: '#app',
+      router,
+      components: { App },
+      template: '<App/>'
+    })
+  }
 })
+
+/* eslint-disable no-new */
+// new Vue({
+// el: '#app',
+// router,
+// components: { App },
+// template: '<App/>'
+// })

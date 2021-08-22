@@ -1,0 +1,43 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+
+
+<script>
+
+  // Your web app's Firebase configuration
+
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+  var firebaseConfig = {
+
+    apiKey: "AIzaSyDzbaGVQi-otyHx0NtJ93uYb8vpzc5hxqo",
+
+    authDomain: "webchat-5d3fc.firebaseapp.com",
+
+    projectId: "webchat-5d3fc",
+
+    storageBucket: "webchat-5d3fc.appspot.com",
+
+    messagingSenderId: "964171486096",
+
+    appId: "1:964171486096:web:639be4be0203383e921915",
+
+    measurementId: "G-Q8V9WHC1JV"
+
+  };
+
+  // Initialize Firebase
+
+  firebase.initializeApp(firebaseConfig);
+
+  firebase.analytics();
+
+</script>
