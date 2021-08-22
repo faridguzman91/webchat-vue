@@ -4,6 +4,23 @@
 
 webchat waarin mensen users kunnen kicken, met een firebase gebaseerde auth database
 
+
+
+install deze packages eerst
+
+css framework: npm install --save bulma
+
+npm install --save buefy
+
+font awesome: npm install --save @fortawesome/fontawesome-svg-core npm install --save @fortawesome/free-solid-svg-icons npm install --save @fortawesome/free-brands-svg-icons npm install --save @fortawesome/free-regular-svg-icons
+
+google firebase database: npm install --save firebase
+
+moment npm install --save moment
+
+npm install vee-validate@next --save
+
+
 *veevalidate* geeft veel problemen waardoor de registreer knop waarschijlijk niet werkt..
 
 ## Build Setup
@@ -30,5 +47,3 @@ npm run e2e
 # run all tests
 npm test
 ```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

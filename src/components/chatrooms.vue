@@ -10,13 +10,13 @@
 
     <hr>
     <p v-if="!addingRoom"><a class="button is-primary" @click="addingRoom = true">
-            <fa-icon icon="plus" /> Create new channel</a></p>
+            <fa-icon icon="plus" /> maak nieuw kanaal</a></p>
 
     <form @submit.prevent="addRoom" v-if="addingRoom">
         <div class="field has-addons">
             <input type="text" class="input" placeholder="New playlist" v-model="newRoomName">
             <p class="control"><button type="submit" class="button is-success">
-                    <fa-icon icon="plus" /> Add</button></p>
+                    <fa-icon icon="plus" /> toevoegen </button></p>
         </div>
     </form>
 </aside>
