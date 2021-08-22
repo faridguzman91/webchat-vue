@@ -2,6 +2,10 @@
 
 > webchat - faridguzman
 
+webchat waarin mensen users kunnen kicken, met een firebase gebaseerde auth database
+
+*veevalidate* geeft veel problemen waardoor de registreer knop waarschijlijk niet werkt..
+
 ## Build Setup
 
 ``` bash
